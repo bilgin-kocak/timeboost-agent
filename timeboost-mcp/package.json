@@ -1,0 +1,29 @@
+{
+  "name": "timeboost-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Arbitrum Timeboost express lane intelligence",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "timeboost-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "viem": "^2.21.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "vitest": "^3.1.1"
+  }
+}
