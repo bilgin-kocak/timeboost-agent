@@ -18,7 +18,7 @@ const CHAIN = (process.env.CHAIN ?? "arbitrum") as ChainName;
 const PRIVATE_KEY = process.env.PRIVATE_KEY as `0x${string}` | undefined;
 const PORT = Number(process.env.PORT) || 3000;
 
-const app = createMcpExpressApp();
+const app = createMcpExpressApp({ host: "0.0.0.0" });
 
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {
